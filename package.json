@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prismix": "npx prismix && prisma format",
+    "prismix": "npx prismix && prisma format && npx prisma generate",
     "dev": "npx prismix && next dev",
     "build": "next build",
     "start": "next start",
@@ -20,8 +20,10 @@
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.10",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
     "next": "13.1.6",
-    "next-auth": "^4.19.2",
+    "next-auth": "^4.22.1",
     "prismix": "^1.0.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +31,8 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "autoprefixer": "^10.4.13",

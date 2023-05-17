@@ -6,5 +6,5 @@ model Post {
     createdAt DateTime @default(now())
     updatedAt DateTime @default(now())
 
-     @@map("posts")
+    @@map("post")
 }

@@ -3,7 +3,8 @@
     {
       "input": [
         "./src/server/models/base.prisma",
-        "./src/server/models/posts.prisma"
+        "./src/server/models/user.prisma",
+        "./src/server/models/post.prisma"
       ],
       "output": "prisma/schema.prisma"
     }
