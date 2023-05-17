@@ -29,7 +29,7 @@ export const nextAuthOptions: NextAuthOptions = {
 
           if (!result) return null;
 
-          const isValidPassword = await compare(result.password, password);
+          const isValidPassword = await compare(password, result.password);
 
           if (!isValidPassword) return null;
 
@@ -51,7 +51,7 @@ export const nextAuthOptions: NextAuthOptions = {
       return token;
     },
     session: async ({ session, token }) => {
-      if (token && session?.user) {
+      if (token) {
         session.user.userId = token.userId;
         session.user.fullname = token.fullname;
         session.user.username = token.username;
